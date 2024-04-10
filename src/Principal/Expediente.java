@@ -5,9 +5,12 @@ import java.util.LinkedList;
 
 public class Expediente {
 	
+	private static int contador = 0;
+	private int numeroExpediente;
 	private Denunciado denunciado;
 	private Ofendido ofendido;
 	private Testigo testigo;
+	private Denunciante denunciante;
 	private LinkedList<String> delitos = new LinkedList<>();
 	private String descripcion;
 	private String fecha;
@@ -19,18 +22,23 @@ public class Expediente {
 	
 	
 	
-	public Expediente(Denunciado denunciado, Ofendido ofendido, Testigo testigo, LinkedList<String> delitos,
+	public Expediente(int numeroExpediente, Denunciado denunciado, Ofendido ofendido, Testigo testigo, Denunciante denunciante, LinkedList<String> delitos,
 			String descripcion, String fecha) {
 		super();
+		contador++;
+		this.numeroExpediente = contador;
 		this.denunciado = denunciado;
 		this.ofendido = ofendido;
 		this.testigo = testigo;
+		this.denunciante = denunciante;
 		this.delitos = delitos;
 		this.descripcion = descripcion;
 		this.fecha = fecha;
 	}
 
-
+	public int getNumeroExpediente() {
+		return numeroExpediente;
+	}
 
 	public Denunciado getDenunciado() {
 		return denunciado;
@@ -49,6 +57,13 @@ public class Expediente {
 	}
 	public void setTestigo(Testigo testigo) {
 		this.testigo = testigo;
+	}
+	
+	public Denunciante getDenunciante() {
+		return denunciante;
+	}
+	public void setDenunciante(Denunciante denunciante) {
+		this.denunciante = denunciante;
 	}
 	public LinkedList<String> getDelitos() {
 		return delitos;
@@ -71,10 +86,18 @@ public class Expediente {
 	
 	@Override
 	public String toString() {
-		return String.format("%s",
-				super.toString()
+		return String.format("%s, %s, %s, %s, %s, %s, %s, %s",
+				this.numeroExpediente,
+				this.denunciado,
+				this.ofendido,
+				this.testigo,
+				this.denunciante,
+				this.delitos.toString(),
+				this.descripcion,
+				this.fecha
 				);
 	}
+	
 }
 	
 	

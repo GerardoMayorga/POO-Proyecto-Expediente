@@ -5,6 +5,8 @@ import java.util.LinkedList;
 
 public class Denunciado {
 	
+	private static int contador = 0;
+	private int numeroDenunciado;
 	private String nombre;
 	private String sexo;
 	private int numero_identidad;
@@ -13,11 +15,17 @@ public class Denunciado {
 	
 	public Denunciado(String nombre, String sexo, int numero_identidad, String direccion, String descripcion) {
 		super();
+		contador++;
+		this.numeroDenunciado = contador;
 		this.nombre = nombre;
 		this.sexo = sexo;
 		this.numero_identidad = numero_identidad;
 		this.direccion = direccion;
 		this.descripcion = descripcion;
+	}
+	
+	public int getNumeroDenunciado() {
+		return numeroDenunciado;
 	}
 	public String getNombre() {
 		return nombre;
@@ -52,8 +60,13 @@ public class Denunciado {
 	
 	@Override
 	public String toString() {
-		return String.format("Denunciado [%s]",
-				super.toString()
+		return String.format("Denunciado [%d, %s, %s, %d, %s, %s]",
+				this.numeroDenunciado,
+				this.nombre,
+				this.sexo,
+				this.numero_identidad,
+				this.direccion,
+				this.descripcion
 				);
 	}
 	

@@ -1,11 +1,9 @@
 package Principal;
 
-import java.util.LinkedList;
-
-public class Testigo {
+public class Denunciante {
 	
 	private static int contador = 0;
-	private int numeroTestigo;
+	private int numeroDenunciante;
 	private String nombre;
 	private String sexo;
 	private int numero_identidad;
@@ -13,14 +11,12 @@ public class Testigo {
 	private String direccion;
 	private int telefono;
 	
-	private LinkedList<Testigo> lstTestigo = new LinkedList<>();
 	
-	
-	public Testigo(String nombre, String sexo, int numero_identidad, String nacionalidad, String direccion,
-			 int telefono) {
+	public Denunciante(String nombre, String sexo, int numero_identidad, String nacionalidad, String direccion,
+			int telefono) {
 		super();
 		contador++;
-		this.numeroTestigo = contador;
+		this.numeroDenunciante = contador;
 		this.nombre = nombre;
 		this.sexo = sexo;
 		this.numero_identidad = numero_identidad;
@@ -28,8 +24,8 @@ public class Testigo {
 		this.direccion = direccion;
 		this.telefono = telefono;
 	}
-	public int getNumeroTestigo() {
-		return numeroTestigo;
+	public int getNumeroDenunciante() {
+		return numeroDenunciante;
 	}
 	public String getNombre() {
 		return nombre;
@@ -71,8 +67,8 @@ public class Testigo {
 	
 	@Override
 	public String toString() {
-		return String.format("Testigo [%d, %s, %s, %d, %s, %s, %d]",
-				this.numeroTestigo,
+		return String.format("Denunciante [%d, %s, %s, %d, %s, %s, %d]",
+				this.numeroDenunciante,
 				this.nombre,
 				this.sexo,
 				this.numero_identidad,
@@ -81,7 +77,4 @@ public class Testigo {
 				this.telefono
 				);
 	}
-	
-	
-
 }

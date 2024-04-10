@@ -3,6 +3,9 @@ package Principal;
 import java.util.LinkedList;
 
 public class Ofendido {
+	
+	private static int contador = 0;
+	private int numeroOfendido;
 	private String nombre;
 	private String sexo;
 	private int numero_identidad;
@@ -14,6 +17,8 @@ public class Ofendido {
 	public Ofendido(String nombre, String sexo, int numero_identidad, String nacionalidad, String direccion,
 			int telefono) {
 		super();
+		contador++;
+		this.numeroOfendido = contador;
 		this.nombre = nombre;
 		this.sexo = sexo;
 		this.numero_identidad = numero_identidad;
@@ -21,7 +26,9 @@ public class Ofendido {
 		this.direccion = direccion;
 		this.telefono = telefono;
 	}
-	
+	public int getNumeroOfendido() {
+		return numeroOfendido;
+	}
 	public String getNombre() {
 		return nombre;
 	}
@@ -62,8 +69,14 @@ public class Ofendido {
 	
 	@Override
 	public String toString() {
-		return String.format("Ofendido [%s]",
-				super.toString()
+		return String.format("Ofendido [%d, %s, %s, %d, %s, %s, %d]",
+				this.numeroOfendido,
+				this.nombre,
+				this.sexo,
+				this.numero_identidad,
+				this.nacionalidad,
+				this.direccion,
+				this.telefono
 				);
 	}
 }
