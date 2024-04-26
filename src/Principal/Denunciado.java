@@ -9,11 +9,11 @@ public class Denunciado {
 	private int numeroDenunciado;
 	private String nombre;
 	private String sexo;
-	private int numero_identidad;
+	private String numero_identidad;
 	private String direccion;
 	private String descripcion;
 	
-	public Denunciado(String nombre, String sexo, int numero_identidad, String direccion, String descripcion) {
+	public Denunciado(String nombre, String sexo, String numero_identidad, String direccion, String descripcion) {
 		super();
 		contador++;
 		this.numeroDenunciado = contador;
@@ -39,10 +39,10 @@ public class Denunciado {
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
-	public int getNumero_identidad() {
+	public String getNumero_identidad() {
 		return numero_identidad;
 	}
-	public void setNumero_identidad(int numero_identidad) {
+	public void setNumero_identidad(String numero_identidad) {
 		this.numero_identidad = numero_identidad;
 	}
 	public String getDireccion() {
@@ -60,7 +60,7 @@ public class Denunciado {
 	
 	@Override
 	public String toString() {
-		return String.format("Denunciado [%d, %s, %s, %d, %s, %s]",
+		return String.format("Denunciado [%d, %s, %s, %s, %s, %s]",
 				this.numeroDenunciado,
 				this.nombre,
 				this.sexo,

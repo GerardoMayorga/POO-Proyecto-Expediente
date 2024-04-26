@@ -86,12 +86,12 @@ public class Expediente {
 	
 	@Override
 	public String toString() {
-		return String.format("%s, %s, %s, %s, %s, %s, %s, %s",
+		return String.format("%d, %s, %s, %s, %s, %s, %s, %s",
 				this.numeroExpediente,
-				this.denunciado,
-				this.ofendido,
+				this.denunciado.toString(),
+				this.ofendido.toString(),
 				this.testigo,
-				this.denunciante,
+				this.denunciante.toString(),
 				this.delitos.toString(),
 				this.descripcion,
 				this.fecha

@@ -8,16 +8,16 @@ public class Testigo {
 	private int numeroTestigo;
 	private String nombre;
 	private String sexo;
-	private int numero_identidad;
+	private String numero_identidad;
 	private String nacionalidad;
 	private String direccion;
-	private int telefono;
+	private String telefono;
 	
 	private LinkedList<Testigo> lstTestigo = new LinkedList<>();
 	
 	
-	public Testigo(String nombre, String sexo, int numero_identidad, String nacionalidad, String direccion,
-			 int telefono) {
+	public Testigo(String nombre, String sexo, String numero_identidad, String nacionalidad, String direccion,
+			String telefono) {
 		super();
 		contador++;
 		this.numeroTestigo = contador;
@@ -43,10 +43,10 @@ public class Testigo {
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
-	public int getNumero_identidad() {
+	public String getNumero_identidad() {
 		return numero_identidad;
 	}
-	public void setNumero_identidad(int numero_identidad) {
+	public void setNumero_identidad(String numero_identidad) {
 		this.numero_identidad = numero_identidad;
 	}
 	public String getNacionalidad() {
@@ -62,16 +62,16 @@ public class Testigo {
 		this.direccion = direccion;
 	}
 	
-	public int getTelefono() {
+	public String getTelefono() {
 		return telefono;
 	}
-	public void setTelefono(int telefono) {
+	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
 	
 	@Override
 	public String toString() {
-		return String.format("Testigo [%d, %s, %s, %d, %s, %s, %d]",
+		return String.format("Testigo [%d, %s, %s, %s, %s, %s, %s]",
 				this.numeroTestigo,
 				this.nombre,
 				this.sexo,

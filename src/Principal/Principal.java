@@ -51,7 +51,7 @@ public class Principal {
 				System.out.println("Ingrese el sexo del denunciado");
 				String sexoDenunciado = sc.nextLine();
 				System.out.println("Ingrese numero de indentidad del denunciado");
-				int numIdentidadDenunciado = Integer.parseInt(sc.nextLine());
+				String numIdentidadDenunciado = sc.nextLine();
 				System.out.println("Ingrese la direccion del denunciado");
 				String direccionDenunciado = sc.nextLine();
 				System.out.println("Ingrese la descripcion del denunciado");
@@ -79,13 +79,13 @@ public class Principal {
 				System.out.println("Ingrese el sexo del denunciante");
 				String sexoDenunciante = sc.nextLine();
 				System.out.println("Ingrese numero de indentidad del denunciante");
-				int numIdentidadDenunciante = Integer.parseInt(sc.nextLine());
+				String numIdentidadDenunciante = sc.nextLine();
 				System.out.println("Ingrese la nacionalidad del denunciante");
 				String nacionalidadDenunciante = sc.nextLine();
 				System.out.println("Ingrese la direccion del denunciante");
 				String direccionDenunciante = sc.nextLine();
 				System.out.println("Ingrese el telefono del denunciante");
-				int telefonoDenunciante = Integer.parseInt(sc.nextLine());
+				String telefonoDenunciante = sc.nextLine();
 				
 				Denunciante denunciante = new Denunciante(nombreDenunciante, sexoDenunciante, numIdentidadDenunciante,
 						nacionalidadDenunciante, direccionDenunciante, telefonoDenunciante);
@@ -93,7 +93,7 @@ public class Principal {
 				expediente.setDenunciante(denunciante);
 				
 				System.out.println("\nEs el denunciante un ofendido?");
-				System.err.println("1. Si   2. No");
+				System.out.println("1. Si   2. No");
 				int esOfendido = Integer.parseInt(sc.nextLine());
 				
 				if (esOfendido == 1) {
@@ -112,13 +112,13 @@ public class Principal {
 						System.out.println("Ingrese el sexo del ofendido");
 						String sexoOfendido = sc.nextLine();
 						System.out.println("Ingrese numero de indentidad del ofendido");
-						int numIdentidadOfendido = Integer.parseInt(sc.nextLine());
+						String numIdentidadOfendido = sc.nextLine();
 						System.out.println("Ingrese la nacionalidad del ofendido");
 						String nacionalidadOfendido = sc.nextLine();
 						System.out.println("Ingrese la direccion del ofendido");
 						String direccionOfendido = sc.nextLine();
 						System.out.println("Ingrese el telefono del ofendido");
-						int telefonoOfendido = Integer.parseInt(sc.nextLine());
+						String telefonoOfendido = sc.nextLine();
 						
 						Ofendido ofendido = new Ofendido(nombreOfendido, sexoOfendido, numIdentidadOfendido,
 								nacionalidadOfendido, direccionOfendido, telefonoOfendido);
@@ -147,13 +147,13 @@ public class Principal {
 						System.out.println("Ingrese el sexo del testigo");
 						String sexoTestigo = sc.nextLine();
 						System.out.println("Ingrese numero de indentidad del testigo");
-						int numIdentidadTestigo = Integer.parseInt(sc.nextLine());
+						String numIdentidadTestigo = sc.nextLine();
 						System.out.println("Ingrese la nacionalidad del testigo");
 						String nacionalidadTestigo = sc.nextLine();
 						System.out.println("Ingrese la direccion del testigo");
 						String direccionTestigo = sc.nextLine();
 						System.out.println("Ingrese el telefono del testigo");
-						int telefonoTestigo = Integer.parseInt(sc.nextLine());
+						String telefonoTestigo = sc.nextLine();
 						
 						Testigo testigo = new Testigo(nombreTestigo, sexoTestigo, numIdentidadTestigo, nacionalidadTestigo,
 								direccionTestigo, telefonoTestigo);
